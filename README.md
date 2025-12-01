@@ -6,9 +6,8 @@ A Python-based Object-Oriented Programming (OOP) demonstration project that impl
 
 This project demonstrates key OOP concepts including:
 
-- **Inheritance**: `OrderVIP` extends `Order`, `Cat/Fish/Spider` extend `Animal`
-- **Abstract Classes**: `Pet` and `Giftable` as abstract base classes
-- **Multiple Inheritance**: `Cat` and `Fish` inherit from both `Animal` and `Pet`
+- **Inheritance**: `OrderVIP` extends `Order`
+- **Abstract Class**: `Giftable` as abstract base classes
 - **Polymorphism**: Different price calculations for regular vs VIP orders
 - **Encapsulation**: Auto-incrementing IDs for customers, items, and orders
 - **Enumerations**: `CustomerType` and `PaymentType` enums
@@ -34,47 +33,12 @@ ExamOOP/
 └── README.md         # This file
 ```
 
-## Requirements
-
-- Python 3.12+
-
-## Setup
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/AlonVizniuk/ExamOOP.git
-   cd ExamOOP
-   ```
-
-2. No additional dependencies are required as the project uses only Python standard library.
-
 ## Usage
 
 Run the main demonstration script:
 
 ```bash
 python main.py
-```
-
-### Example Output
-
-```
---- 🛒 Starting Order Management System Comprehensive Test ---
-
-## 1. Customer & Item Creation (Unique ID Check)
-Customer IDs used: 1, 2.
-Item IDs used: 1, 2, 3.
-
-## 2. Testing Regular Order & Auto-Favorites
-Order REG ID: 1.
-  Price Check: 55.00 (Expected 55.0)
-  REG Favorites after order (Expected 2): {'Soda', 'Large Pizza'}
-
-## 3. Testing VIP Order (Discount & Polymorphism)
-Order VIP ID: 2.
-  Price Check: 44.00 (Expected 44.0)
-
---- ✅ All Tests Complete ---
 ```
 
 ## Classes
@@ -144,20 +108,6 @@ customer.take_gift(gift)
 customer.open_gift()  # Prints congratulations message
 ```
 
-### Animals and Pets
-
-Demonstrates multiple inheritance with abstract classes.
-
-```python
-from cat import Cat
-from fish import Fish
-from spider import Spider
-
-cat = Cat("Whiskers")    # 4 legs, is a Pet
-fish = Fish()            # 0 legs, is a Pet
-spider = Spider()        # 8 legs, not a Pet
-```
-
 ## Key Features
 
 - **Auto-incrementing IDs**: Customers, Items, and Orders automatically receive unique IDs
@@ -165,15 +115,3 @@ spider = Spider()        # 8 legs, not a Pet
 - **VIP Discounts**: VIP customers receive percentage-based discounts
 - **Gift System**: Customers can receive and open gifts
 - **Type Safety**: Uses enums for customer and payment types
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/new-feature`)
-3. Commit your changes (`git commit -am 'Add new feature'`)
-4. Push to the branch (`git push origin feature/new-feature`)
-5. Create a Pull Request
-
-## License
-
-This project is for educational purposes as part of an OOP examination.
